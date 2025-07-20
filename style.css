@@ -1,0 +1,180 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #121212;
+    color: #f0f0f0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+header {
+    background-color: #1e1e1e;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+.nav-heading {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #00ffc8;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.array-inputs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.array-inputs input[type=range] {
+    width: 250px;
+    accent-color: #00ffc8;
+}
+
+.array-inputs button {
+    padding: 10px 20px;
+    background-color: #00ffc8;
+    border: none;
+    color: #000;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.array-inputs button:hover {
+    background-color: #00dab3;
+}
+
+/* Buttons for algorithms */
+.algos {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.algos button {
+    padding: 10px;
+    background-color: #1f1f1f;
+    color: #f0f0f0;
+    border: 1px solid #333;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.butt_locked {
+  background-color: gray;
+  color: white;
+  cursor: not-allowed;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+
+.algos button:hover {
+    background-color: #00ffc8;
+    color: #000;
+    border-color: #00ffc8;
+}
+
+/* Section Layout */
+section {
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+/* Complexity Containers */
+#Info_Cont1, #Info_Cont2 {
+    background-color: #1f1f1f;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+h3 {
+    font-size: 1.5rem;
+    color: #00ffc8;
+    margin-bottom: 15px;
+}
+
+.Complexity_Containers {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.Pair_Definitions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Sub_Heading {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Array Container */
+#array_container {
+    display: flex;
+    align-items: flex-end;
+    height: 300px;
+    margin: 0 auto;
+    width: 95%;
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: inset 0 0 10px #00000099;
+    overflow-x: auto;
+}
+
+.bar {
+    margin: 0 1px;
+    background-color: #00ffc8;
+    transition: height 0.3s ease, background-color 0.3s ease;
+}
+
+/* Footer */
+footer {
+    margin-top: auto;
+    text-align: center;
+    padding: 20px;
+    color: #666;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .algos {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .array-inputs {
+        flex-direction: column;
+    }
+}
